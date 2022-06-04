@@ -1748,3 +1748,29 @@ input, select, textarea {
 	from {opacity: .4}
 	to {opacity: 1}
 }
+
+.drinks-container {
+	display: flex;
+}
+
+.drinks-container img {
+	flex: 50%;
+}
+
+.drinks-container .food-menu {
+	margin-left: 10px;
+}
+
+#show_image_popup{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+#show_image_popup img{
+	max-width: 90%;
+	height: auto;
+}
