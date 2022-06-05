@@ -287,10 +287,10 @@
 
     // Events.
     $body.on('click', function (event) {
-
-        if (event.target.className === 'view-img') {
-            return;
-        } else if (event.target.getAttribute('alt') === 'ViewImage') {
+        if (event.target.className === 'modal-content' ||
+            event.target.className === 'image-viewer-class' ||
+            event.target.className === 'image-viewer-close'
+        ) {
             return;
         } else {
             if ($body.hasClass('is-article-visible')) $main._hide(true);
@@ -373,7 +373,15 @@
         $main._show(location.hash.substr(1), true);
     });
 
-    $.viewImage({
-        'target': '.drinks-menu img, .food-menu img', 'delay': 300
-    })
+    $(".drinks-menu img, .food-menu img").click(function(){
+        $('.is-article-visible').css("overflow", "hidden");
+        $("#full-image").attr("src", $(this).attr("src"));
+        $('#image-viewer').show();
+    });
+
+    $("#image-viewer .image-viewer-close").click(function(){
+        $('.is-article-visible').css("overflow", "");
+        $('#image-viewer').hide();
+    });
+
 })(jQuery);
