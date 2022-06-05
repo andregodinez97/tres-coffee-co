@@ -1792,7 +1792,7 @@ input, select, textarea {
 .modal-content {
 	margin:auto;
 	display:block;
-	width:80%;
+	width:100%;
 	max-width:700px;
 
 }
@@ -1811,10 +1811,11 @@ to {transform:scale(1)}
 	position:absolute;
 	top:15px;
 	right:35px;
-	color:#f1f1f1;
+	color: lightslategray;
 	font-size:40px;
 	font-weight:bold;
 	transition:0.3s;
+	filter: drop-shadow(0 0 0.75rem black);
 }
 
 #image-viewer .image-viewer-close:hover,
